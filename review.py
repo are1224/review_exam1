@@ -19,7 +19,7 @@ for review in review_section:
         a_tag = review.select_one('dl > dt > a')
 
         review_title = a_tag.get_text()
-        review_link = a_tag['href']
+        review_link = a_tag['href'].split('=')[1]
 
         data = {
             'title' : review_title,
